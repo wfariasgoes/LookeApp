@@ -1,0 +1,60 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+android {
+    compileSdkVersion 28
+
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "version"
+    productFlavors {
+        dev {
+            buildConfigField "String", "API_URL", '"https://firebasestorage.googleapis.com/v0/b/"'
+        }
+    }
+
+}
+
+ext {
+    retrofit = '2.6.2'
+    rx_java_adapter = '2.5.0'
+    gson = '2.8.6'
+    lifecycle_extention = '1.1.1'
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //retrofit load api
+    implementation "com.squareup.retrofit2:retrofit:$retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofit"
+    implementation "com.squareup.retrofit2:adapter-rxjava2:$rx_java_adapter"
+    implementation("com.squareup.okhttp3:logging-interceptor:4.2.2") {
+        transitive = true
+    }
+
+    implementation "com.google.code.gson:gson:$gson"
+    implementation "android.arch.lifecycle:extensions:$lifecycle_extention"
+}
