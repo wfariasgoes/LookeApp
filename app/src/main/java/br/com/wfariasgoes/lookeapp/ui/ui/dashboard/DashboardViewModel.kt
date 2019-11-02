@@ -1,4 +1,4 @@
-package br.com.wfariasgoes.lookeapp.ui.activitiy.ui.dashboard
+package br.com.wfariasgoes.lookeapp.ui.ui.dashboard
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

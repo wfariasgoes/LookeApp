@@ -1,4 +1,4 @@
-package br.com.wfariasgoes.lookeapp.ui.activitiy.ui.notifications
+package br.com.wfariasgoes.lookeapp.ui.ui.notifications
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

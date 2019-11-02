@@ -1,4 +1,4 @@
-package br.com.wfariasgoes.lookeapp.ui.activitiy.home
+package br.com.wfariasgoes.lookeapp.ui.home
 
 import androidx.lifecycle.MutableLiveData
 import br.com.wfariasgoes.lookeapp.base.BaseViewModel

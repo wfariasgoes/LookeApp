@@ -1,4 +1,4 @@
-package br.com.wfariasgoes.lookeapp.ui.activitiy.ui.notifications
+package br.com.wfariasgoes.lookeapp.ui.ui.notifications
 
 import android.os.Bundle
 import android.view.LayoutInflater

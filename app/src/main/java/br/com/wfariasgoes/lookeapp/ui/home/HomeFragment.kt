@@ -1,21 +1,20 @@
-package br.com.wfariasgoes.lookeapp.ui.activitiy.home
+package br.com.wfariasgoes.lookeapp.ui.home
 
 import android.content.Context
-import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.wfariasgoes.lookeapp.R
 import br.com.wfariasgoes.lookeapp.base.BaseFragment
+import br.com.wfariasgoes.lookeapp.extension.setDefaultGridSettings
+import br.com.wfariasgoes.lookeapp.ui.adapter.HomeAdapter
 import br.com.wfariasgoes.network.response.ResponseData
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : BaseFragment() {
     private lateinit var viewModel: HomeViewModel
     private lateinit var contextHome: Context
+    private lateinit var adapter: HomeAdapter
 
     override fun getRootLayoutId(): Int {
         return R.layout.fragment_home
@@ -32,9 +31,13 @@ class HomeFragment : BaseFragment() {
         contextHome = view.context
 
         val homeResponse = Observer<ResponseData> {
-            for (resp in it.objects){
-                Log.i("TAG", resp.name)
-            }
+//            for (resp in it.objects){
+//                Log.i("TAG", resp.name)
+//            }
+
+            adapter =  HomeAdapter(it.objects, contextHome)
+            recycler.setDefaultGridSettings(contextHome, adapter)
+
         }
 
         viewModel.homeRepositoryResponse().observe(this, homeResponse)

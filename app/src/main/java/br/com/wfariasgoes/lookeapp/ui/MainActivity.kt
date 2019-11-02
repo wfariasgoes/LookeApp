@@ -1,4 +1,4 @@
-package br.com.wfariasgoes.lookeapp.ui.activitiy
+package br.com.wfariasgoes.lookeapp.ui
 
 import android.content.Context
 import android.content.Intent

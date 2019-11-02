@@ -1,10 +1,10 @@
-package br.com.wfariasgoes.lookeapp.ui.activitiy.splash
+package br.com.wfariasgoes.lookeapp.ui.splash
 
 import android.os.Bundle
 import android.os.Handler
 import br.com.wfariasgoes.lookeapp.R
 import br.com.wfariasgoes.lookeapp.base.BaseActivity
-import br.com.wfariasgoes.lookeapp.ui.activitiy.MainActivity
+import br.com.wfariasgoes.lookeapp.ui.MainActivity
 
 class MainActivity : BaseActivity() {
     private val splashDisplayLength: Long = 3500
