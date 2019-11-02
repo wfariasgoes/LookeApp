@@ -35,7 +35,7 @@ class HomeFragment : BaseFragment() {
 //                Log.i("TAG", resp.name)
 //            }
 
-            adapter =  HomeAdapter(it.objects, contextHome)
+            adapter =  HomeAdapter(it.objects, contextHome, this)
             recycler.setDefaultGridSettings(contextHome, adapter)
 
         }
