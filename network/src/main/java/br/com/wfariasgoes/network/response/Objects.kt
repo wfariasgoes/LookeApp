@@ -1,6 +1,7 @@
 package br.com.wfariasgoes.network.response
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Objects (
 
@@ -8,4 +9,4 @@ data class Objects (
 	@SerializedName("bg") val bg : String,
 	@SerializedName("im") val im : String,
 	@SerializedName("sg") val sg : String
-)
+): Serializable

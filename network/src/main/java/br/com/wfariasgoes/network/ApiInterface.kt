@@ -7,7 +7,7 @@ import retrofit2.http.GET
 
 interface ApiInterface {
 
-    @GET("desafio-dev-android.appspot.com/o/assets.json?alt=media&token=964a35bb-53d0-45aa-a3dd-ecad72a2f14c")
+    @GET("/looke/assets.json")
     fun getMovies(): Observable<ResponseData>
 
 }

@@ -10,6 +10,4 @@ class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
     var view: View = itemView
     var nameVideo: TextView = itemView.findViewById(R.id.textNameVideo)
     var imageVideo:  ImageView = itemView.findViewById(R.id.imageVideo)
-    var imagePlay: ImageView = itemView.findViewById(R.id.imagePlay)
-
 }

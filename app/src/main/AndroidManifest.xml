@@ -12,12 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ui.video.VideoActivity"
-            android:screenOrientation="landscape"></activity>
+        <activity android:name=".ui.moviedetail.MovieDetailActivity"></activity>
+        <activity
+            android:name=".ui.videoplayer.VideoActivity"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".ui.MainActivity"
             android:label="@string/title_activity_home" />
-        <activity android:name=".ui.splash.MainActivity"
+        <activity
+            android:name=".ui.splash.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
