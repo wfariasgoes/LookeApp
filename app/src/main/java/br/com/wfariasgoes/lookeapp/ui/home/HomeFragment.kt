@@ -1,6 +1,7 @@
 package br.com.wfariasgoes.lookeapp.ui.home
 
 import android.content.Context
+import android.provider.MediaStore
 import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders

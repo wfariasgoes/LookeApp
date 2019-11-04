@@ -39,6 +39,15 @@
         app:layout_constraintStart_toStartOf="@+id/videoView"
         app:layout_constraintTop_toTopOf="@+id/videoView" />
 
+    <ImageView
+        android:id="@+id/imagePlayPause"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/videoView"
+        app:layout_constraintTop_toTopOf="@+id/videoView"
+        app:srcCompat="@drawable/ic_cloud_download_black_24dp" />
 
     <ImageView
         android:id="@+id/imageDownload"

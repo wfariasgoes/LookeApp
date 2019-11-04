@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import br.com.wfariasgoes.lookeapp.R
 import br.com.wfariasgoes.lookeapp.base.BaseActivity
+import br.com.wfariasgoes.lookeapp.ui.videoplayer.VideoActivity
 import br.com.wfariasgoes.network.response.Objects
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_movie_detail.*
@@ -43,6 +44,7 @@ class MovieDetailActivity : BaseActivity() {
         viewModel = MovieDetailViewModel(objectsVideo)
         setupViewModel()
 
+        //Para exemplificar o uso do ViewModel - LiveData
         viewModel.text.observe(this, Observer {
             textName.text = it
             textSecondName.text = it
@@ -57,6 +59,11 @@ class MovieDetailActivity : BaseActivity() {
                 .load(it)
                 .into(imagePath)
         })
+
+        imagePlay.setOnClickListener {
+            val intent: Intent = VideoActivity.getIntent( this, objectsVideo.bg, objectsVideo.sg)
+            startActivity(intent)
+        }
 
     }
 

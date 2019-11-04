@@ -1,2 +1,2 @@
-include ':app', ':network'
+include ':app', ':network', ':model'
 rootProject.name='LookeApp'
